@@ -4,50 +4,45 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-charcoal text-cream">
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
+    <footer className="relative overflow-hidden" style={{ backgroundColor: 'var(--color-bg-alt)' }}>
+      {/* Spot color accent — bottom-left corner bleed */}
+      <div
+        className="absolute bottom-0 left-0 w-48 h-48 pointer-events-none"
+        style={{ backgroundColor: 'var(--color-spot-1)' }}
+      />
+      <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-10">
           <div>
-            <p className="font-display font-bold text-lg">Brent Carlin</p>
-            <p className="font-mono text-sm text-cream/50 mt-1">
+            <p className="font-display text-3xl text-fg-on-alt mb-1">Brent Carlin</p>
+            <p className="font-mono text-xs text-fg-on-alt/30 tracking-widest uppercase">
               © {year} All rights reserved.
             </p>
           </div>
 
-          <nav className="flex flex-wrap gap-6">
-            <Link
-              href="/#work"
-              className="font-mono text-sm text-cream/60 hover:text-cream transition-colors"
-            >
-              Work
-            </Link>
-            <Link
-              href="/#about"
-              className="font-mono text-sm text-cream/60 hover:text-cream transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              href="/resume"
-              className="font-mono text-sm text-cream/60 hover:text-cream transition-colors"
-            >
-              Resume
-            </Link>
-            <Link
-              href="/#contact"
-              className="font-mono text-sm text-cream/60 hover:text-cream transition-colors"
-            >
-              Contact
-            </Link>
+          <nav className="flex flex-wrap gap-8">
+            {[
+              { href: '/#work', label: 'Work' },
+              { href: '/#about', label: 'About' },
+              { href: '/resume', label: 'Resume' },
+              { href: '/#contact', label: 'Contact' },
+            ].map(({ href, label }) => (
+              <Link
+                key={label}
+                href={href}
+                className="font-mono text-xs text-fg-on-alt/40 hover:text-fg-on-alt transition-colors tracking-widest uppercase"
+              >
+                {label}
+              </Link>
+            ))}
           </nav>
 
-          <div className="flex gap-4">
+          <div className="flex gap-6">
             <a
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="font-mono text-sm text-cream/60 hover:text-cream transition-colors"
+              className="font-mono text-xs text-fg-on-alt/40 hover:text-fg-on-alt transition-colors tracking-widest uppercase"
             >
               GitHub
             </a>
@@ -56,7 +51,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="font-mono text-sm text-cream/60 hover:text-cream transition-colors"
+              className="font-mono text-xs text-fg-on-alt/40 hover:text-fg-on-alt transition-colors tracking-widest uppercase"
             >
               LinkedIn
             </a>

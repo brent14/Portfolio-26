@@ -23,9 +23,9 @@ export default function FilterBar({ active, onChange }: FilterBarProps) {
       {active.length > 0 && (
         <button
           onClick={clearAll}
-          className="font-mono text-xs text-charcoal-muted hover:text-charcoal underline underline-offset-2 transition-colors mr-2"
+          className="font-mono text-sm text-fg-base/40 hover:text-fg-base transition-colors mr-2 tracking-widest uppercase"
         >
-          Clear
+          All
         </button>
       )}
       {ALL_FILTER_TAGS.map((tag) => {
@@ -34,10 +34,11 @@ export default function FilterBar({ active, onChange }: FilterBarProps) {
           <button
             key={tag}
             onClick={() => toggle(tag)}
-            className={`font-mono text-xs px-3 py-1.5 border transition-colors ${
+            style={isActive ? { backgroundColor: 'var(--color-spot-1)', color: 'var(--color-fg-on-alt)', borderColor: 'var(--color-spot-1)' } : {}}
+            className={`font-mono text-sm px-3 py-1.5 border transition-colors ${
               isActive
-                ? 'bg-charcoal text-cream border-charcoal'
-                : 'bg-transparent text-charcoal-muted border-charcoal/20 hover:border-charcoal hover:text-charcoal'
+                ? 'border-transparent'
+                : 'bg-transparent text-fg-base/50 border-fg-base/15 hover:border-fg-base/40 hover:text-fg-base'
             }`}
           >
             {tag}

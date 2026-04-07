@@ -29,12 +29,12 @@ export default async function LabArticlePage({ params }: Props) {
   if (!article) notFound()
 
   return (
-    <div className="min-h-screen bg-cream pt-24">
+    <div className="min-h-screen bg-bg-base pt-24">
       <div className="max-w-3xl mx-auto px-6 py-16">
-        <h1 className="font-display font-bold text-4xl text-charcoal mb-8">
+        <h1 className="font-display font-bold text-4xl text-fg-base mb-8">
           {article.title}
         </h1>
-        <div className="font-sans text-lg text-charcoal/80 leading-relaxed">
+        <div className="font-sans text-lg text-fg-base/80 leading-relaxed">
           {/* MDX content goes here in Phase 3 */}
           <p>Article content coming soon.</p>
         </div>

@@ -52,10 +52,10 @@ const placeholderPosts = [
 
 export default function LabPage() {
   return (
-    <div className="min-h-screen bg-cream pt-24">
+    <div className="min-h-screen bg-bg-base pt-24">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <h1 className="font-display font-bold text-5xl text-charcoal mb-4">Lab</h1>
-        <p className="font-sans text-lg text-charcoal/60 mb-16 max-w-xl">
+        <h1 className="font-display font-bold text-5xl text-fg-base mb-4">Lab</h1>
+        <p className="font-sans text-lg text-fg-base/60 mb-16 max-w-xl">
           Articles, experiments, and tutorials on animation, WebGL, WordPress, and the
           web in general.
         </p>
@@ -64,19 +64,19 @@ export default function LabPage() {
           {placeholderPosts.map((post) => (
             <div
               key={post.slug}
-              className="bg-cream-dark p-8 opacity-60"
+              className="bg-fg-base/5 p-8 opacity-60"
               aria-label="Coming soon"
             >
               <div className="flex items-center gap-3 mb-4">
-                <span className="font-mono text-xs text-charcoal/50 border border-charcoal/20 px-2 py-0.5">
+                <span className="font-mono text-xs text-fg-base/50 border border-fg-base/20 px-2 py-0.5">
                   {post.tag}
                 </span>
-                <span className="font-mono text-xs text-charcoal/40">{post.date}</span>
+                <span className="font-mono text-xs text-fg-base/40">{post.date}</span>
               </div>
-              <h2 className="font-display font-bold text-xl text-charcoal mb-3 leading-snug">
+              <h2 className="font-display font-bold text-xl text-fg-base mb-3 leading-snug">
                 {post.title}
               </h2>
-              <p className="font-sans text-sm text-charcoal/60 leading-relaxed">
+              <p className="font-sans text-sm text-fg-base/60 leading-relaxed">
                 {post.excerpt}
               </p>
             </div>

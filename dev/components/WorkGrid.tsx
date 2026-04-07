@@ -23,20 +23,20 @@ export default function WorkGrid() {
 
       {filtered.length === 0 ? (
         <div className="py-16 text-center">
-          <p className="font-mono text-sm text-charcoal-muted">
+          <p className="font-mono text-sm text-fg-muted">
             No projects match that filter combination.
           </p>
           <button
             onClick={() => setActiveTags([])}
-            className="font-mono text-sm text-charcoal underline underline-offset-2 mt-2"
+            className="font-mono text-sm text-fg-base underline underline-offset-2 mt-2"
           >
             Clear filters
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filtered.map((project) => (
-            <WorkCard key={project.slug} project={project} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+          {filtered.map((project, i) => (
+            <WorkCard key={project.slug} project={project} index={i} />
           ))}
         </div>
       )}

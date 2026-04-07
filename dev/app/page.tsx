@@ -58,9 +58,14 @@ export default function HomePage() {
       <HeroSection />
 
       {/* Positioning */}
-      <section className="bg-cream border-t border-charcoal/10">
-        <div className="max-w-7xl mx-auto px-6 py-24">
-          <p className="font-sans text-xl md:text-2xl text-charcoal/80 leading-relaxed max-w-3xl">
+      <section className="bg-bg-base relative overflow-hidden">
+        {/* Spot color accent bar */}
+        <div
+          className="absolute left-0 top-0 bottom-0 w-1"
+          style={{ backgroundColor: 'var(--color-spot-1)' }}
+        />
+        <div className="max-w-7xl mx-auto px-6 py-24 md:py-32">
+          <p className="font-display text-2xl md:text-3xl lg:text-4xl text-fg-base leading-relaxed">
             Over 15 years, I&apos;ve built websites and digital experiences for brands
             ranging from global automotive dealers to nonprofit advocacy groups. My work
             spans the full stack, from GSAP-driven and WebGL animations to CRM
@@ -74,24 +79,30 @@ export default function HomePage() {
       </section>
 
       {/* Work grid */}
-      <section id="work" className="bg-cream border-t border-charcoal/10">
+      <section id="work" className="bg-bg-base border-t border-fg-base/10">
         <div className="max-w-7xl mx-auto px-6 py-24">
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-12">
-            Work
-          </h2>
+          <div className="flex items-baseline justify-between mb-16">
+            <h2 className="font-display text-5xl md:text-6xl text-fg-base">Work</h2>
+            <span className="font-mono text-xs text-fg-muted">20 projects</span>
+          </div>
           <WorkGrid />
         </div>
       </section>
 
       {/* About */}
-      <section id="about" className="bg-charcoal">
-        <div className="max-w-7xl mx-auto px-6 py-24">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+      <section id="about" className="relative overflow-hidden" style={{ backgroundColor: 'var(--color-bg-alt)' }}>
+        {/* Spot color block — top-right corner */}
+        <div
+          className="absolute top-0 right-0 w-2/5 h-full pointer-events-none"
+          style={{ backgroundColor: 'var(--color-spot-1)' }}
+        />
+        <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
-              <h2 className="font-display font-bold text-3xl md:text-4xl text-cream mb-8">
+              <h2 className="font-display text-5xl md:text-6xl text-fg-on-alt mb-10 leading-tight">
                 About
               </h2>
-              <p className="font-sans text-lg text-cream/70 leading-relaxed">
+              <p className="font-sans text-lg text-fg-on-alt/75 leading-relaxed">
                 For 15 years I&apos;ve had the pleasure of building websites and digital
                 experiences from global automotive brands to scrappy nonprofits and
                 everything in between. Most of that work is the unglamorous kind: the CRM
@@ -105,26 +116,34 @@ export default function HomePage() {
               </p>
             </div>
             {/* Portrait placeholder */}
-            <div className="aspect-[3/4] bg-charcoal-soft flex items-center justify-center">
-              <span className="font-mono text-xs text-cream/20">Portrait photo</span>
+            <div className="aspect-[3/4] relative overflow-hidden">
+              <div
+                className="absolute inset-0"
+                style={{ backgroundColor: 'var(--color-spot-2)' }}
+              />
+              <div className="absolute inset-0 flex items-end p-6">
+                <span className="font-mono text-xs text-fg-on-alt/30">Portrait photo</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact CTA */}
-      <section id="contact" className="bg-cream border-t border-charcoal/10">
-        <div className="max-w-7xl mx-auto px-6 py-24 text-center">
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
-            Have a project in mind?
-          </h2>
-          <p className="font-sans text-lg text-charcoal/60 mb-8">Let&apos;s talk.</p>
-          <a
-            href="mailto:brent@brentcarlin.com"
-            className="inline-block font-mono text-sm bg-charcoal text-cream px-8 py-4 hover:bg-charcoal-soft transition-colors"
-          >
-            brent@brentcarlin.com
-          </a>
+      <section id="contact" className="bg-bg-base">
+        <div className="max-w-7xl mx-auto px-6 py-32">
+          <div className="max-w-2xl">
+            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl text-fg-base leading-tight mb-8">
+              Have a project in mind?
+            </h2>
+            <a
+              href="mailto:brent@brentcarlin.com"
+              className="inline-flex items-center gap-3 font-mono text-sm text-fg-base border-b border-fg-base pb-1 hover:opacity-60 transition-opacity"
+            >
+              brent@brentcarlin.com
+              <span aria-hidden>→</span>
+            </a>
+          </div>
         </div>
       </section>
     </>

@@ -1,18 +1,22 @@
 import type { Metadata } from 'next'
-import { Rubik, DM_Sans, IBM_Plex_Mono } from 'next/font/google'
+import { Sorts_Mill_Goudy, Average_Sans, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import PaletteSwitcher from '@/components/PaletteSwitcher'
 
-const rubik = Rubik({
+const sortsMillGoudy = Sorts_Mill_Goudy({
   subsets: ['latin'],
-  variable: '--font-rubik',
+  weight: '400',
+  style: ['normal', 'italic'],
+  variable: '--font-sorts-mill-goudy',
   display: 'swap',
 })
 
-const dmSans = DM_Sans({
+const averageSans = Average_Sans({
   subsets: ['latin'],
-  variable: '--font-dm-sans',
+  weight: '400',
+  variable: '--font-average-sans',
   display: 'swap',
 })
 
@@ -60,12 +64,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${rubik.variable} ${dmSans.variable} ${ibmPlexMono.variable}`}
+      className={`${sortsMillGoudy.variable} ${averageSans.variable} ${ibmPlexMono.variable}`}
     >
       <body>
-        <Nav />
+
+<Nav />
         <main>{children}</main>
         <Footer />
+        <PaletteSwitcher />
       </body>
     </html>
   )

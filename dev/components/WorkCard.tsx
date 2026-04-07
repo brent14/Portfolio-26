@@ -3,39 +3,54 @@ import type { Project } from '@/data/projects'
 
 interface WorkCardProps {
   project: Project
+  index: number
 }
 
-export default function WorkCard({ project }: WorkCardProps) {
+// Cycle through all 5 spot colors across the grid
+const spotColors = [
+  'var(--color-spot-1)',
+  'var(--color-spot-2)',
+  'var(--color-spot-3)',
+  'var(--color-spot-4)',
+  'var(--color-spot-5)',
+]
+
+export default function WorkCard({ project, index }: WorkCardProps) {
+  const spotColor = spotColors[index % spotColors.length]
+
   return (
     <Link
       href={`/work/${project.slug}`}
-      className="group block bg-cream-dark hover:bg-charcoal transition-colors duration-300"
+      className="group block"
     >
-      {/* Thumbnail placeholder */}
-      <div className="aspect-[4/3] bg-charcoal/10 group-hover:bg-charcoal/20 transition-colors relative overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="font-mono text-xs text-charcoal/30 group-hover:text-cream/20 transition-colors text-center px-4">
-            {project.title}
-          </span>
-        </div>
+      {/* Image area — solid spot color fill */}
+      <div className="aspect-[4/3] relative overflow-hidden">
+        {/* Solid spot color — cycles through all 5 */}
+        <div
+          className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-80"
+          style={{ backgroundColor: spotColor }}
+        />
+        {/* Index number — screen print register mark feel */}
+        <span className="absolute top-4 left-4 font-mono text-xs text-fg-base/20 group-hover:text-fg-on-alt/30 transition-colors">
+          {String(index + 1).padStart(2, '0')}
+        </span>
       </div>
 
-      {/* Card content */}
-      <div className="p-5">
-        <h3 className="font-display font-bold text-base text-charcoal group-hover:text-cream transition-colors leading-snug mb-3">
-          {project.title}
-        </h3>
-
-        <div className="flex flex-wrap gap-1.5">
+      {/* Typography block — tags above, title below */}
+      <div className="pt-4 pb-6">
+        <div className="flex flex-wrap gap-2 mb-2">
           {project.filterTags.map((tag) => (
             <span
               key={tag}
-              className="font-mono text-xs text-charcoal/60 group-hover:text-cream/60 transition-colors border border-charcoal/20 group-hover:border-cream/20 px-2 py-0.5"
+              className="font-mono text-[15px] text-fg-muted"
             >
               {tag}
             </span>
           ))}
         </div>
+        <h3 className="font-display text-[26px] leading-snug text-fg-base group-hover:italic transition-all duration-300">
+          {project.title}
+        </h3>
       </div>
     </Link>
   )
