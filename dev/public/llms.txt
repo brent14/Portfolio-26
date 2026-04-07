@@ -1,0 +1,40 @@
+# Brent Carlin
+
+> Full-stack developer. 15 years of experience building websites and digital experiences for local and global brands. Based in South Florida.
+
+Brent Carlin is a full-stack developer specializing in WebGL, GSAP animation, WordPress development, and DevOps infrastructure. He has built websites and digital experiences for brands including Porsche, Covergirl, Mercury Marine, Virgin Voyages, Santa Margherita, University of Miami, Captains for Clean Water, and many others.
+
+## Specializations
+
+- **WebGL & 3D**: Three.js, React Three Fiber, GLSL shaders
+- **Animation**: GSAP (GreenSock), SVG animation, scroll-driven animation, HTML5 banner production
+- **Frontend**: React, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind
+- **CMS & WordPress**: Full-lifecycle WordPress development, headless CMS, CMS management
+- **CRM & Data**: Salesforce integration, lead generation systems, CRM architecture, email template development
+- **DevOps**: AWS (EC2, Lightsail, RDS), Cloudflare, Vercel, CI/CD, Git, security
+- **Backend**: PHP, Node.js, Python, full-stack application development
+
+## Selected Work
+
+- [Motion as product story — Covergirl Supersizer](/work/covergirl-parallax-scroll-animation) — Parallax scroll animation campaign
+- [Animated as it happened — Porsche Expedition Cayenne](/work/real-time-campaign-gsap-animation) — GSAP SVG animation campaign site
+- [The story of local captains fighting for Florida's water — Captains for Clean Water](/work/nonprofit-gsap-svg-animation-wordpress) — GSAP animation + Salesforce CRM
+- [After-sales infrastructure built for 16 markets — Porsche LATAM](/work/multi-market-landing-pages-crm) — CRM integration, 16-market rollout
+- [From boat builder to dealer network — Invincible Boats](/work/wordpress-boat-dealer-locator-crm) — WordPress, dealer locator, CRM
+- [14 programs, one lead generation system — University of Miami](/work/higher-education-lead-generation-salesforce) — Salesforce lead generation
+- [The infrastructure behind the work — DevOps Architecture & Operations](/work/devops-architecture-aws-cloudflare-security) — AWS, Cloudflare, CI/CD
+- [Full-lifecycle CMS management across major brands](/work/full-lifecycle-wordpress-cms-management) — WordPress CMS management
+- [Tournament registration built for a fishing community — Herman Lucerne](/work/nextjs-stripe-tournament-registration-portal) — Next.js, Stripe, Zod
+- [Local races, live — NWA Democrat-Gazette Election App](/work/full-stack-real-time-news-election-app) — Full-stack real-time app
+
+## Contact
+
+- Email: brent@brentcarlin.com
+- Location: South Florida, FL, USA
+- Available for: freelance projects, agency partnerships, full-time roles
+
+## Site Sections
+
+- [Work](/work) — 20 case studies across animation, WordPress, CRM, DevOps, and platform projects
+- [Resume](/resume) — Full professional resume
+- [Lab](/lab) — Articles and tutorials on GSAP, WebGL, WordPress, and web development
