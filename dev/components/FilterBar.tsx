@@ -34,11 +34,11 @@ export default function FilterBar({ active, onChange }: FilterBarProps) {
           <button
             key={tag}
             onClick={() => toggle(tag)}
-            style={isActive ? { backgroundColor: 'var(--color-spot-1)', color: 'var(--color-fg-on-alt)', borderColor: 'var(--color-spot-1)' } : {}}
+            style={isActive ? { backgroundColor: 'var(--color-spot-4)', color: 'var(--color-fg-on-alt)', borderColor: 'var(--color-spot-4)' } : {}}
             className={`font-mono text-sm px-3 py-1.5 border transition-colors ${
               isActive
                 ? 'border-transparent'
-                : 'bg-transparent text-fg-base/50 border-fg-base/15 hover:border-fg-base/40 hover:text-fg-base'
+                : 'bg-transparent text-fg-base border-fg-base/30 hover:border-fg-base/15 hover:text-fg-base/50'
             }`}
           >
             {tag}
