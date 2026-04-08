@@ -49,6 +49,9 @@
   --color-spot-5: #7888D0;
 }
 
+/* ─── Custom variants ───────────────────────────────────── */
+@variant dark-palette (.palette-dark &);
+
 /* ─── Base styles ────────────────────────────────────────── */
 * { box-sizing: border-box; }
 

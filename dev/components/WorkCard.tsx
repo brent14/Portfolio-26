@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Project } from '@/data/projects'
 
 interface WorkCardProps {
@@ -23,15 +24,39 @@ export default function WorkCard({ project, index }: WorkCardProps) {
       href={`/work/${project.slug}`}
       className="group block"
     >
-      {/* Image area — solid spot color fill */}
+      {/* Image area */}
       <div className="aspect-[4/3] relative overflow-hidden">
-        {/* Solid spot color — cycles through all 5 */}
-        <div
-          className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-80"
-          style={{ backgroundColor: spotColor }}
-        />
-        {/* Index number — screen print register mark feel */}
-        <span className="absolute top-4 left-4 font-mono text-xs text-fg-base/20 group-hover:text-fg-on-alt/30 transition-colors">
+        {project.thumb ? (
+          <>
+            {/* Light palette thumbnail */}
+            <Image
+              src={project.thumb}
+              alt={project.title}
+              fill
+              className={`object-cover ${project.thumbDark ? 'dark-palette:hidden' : ''}`}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+            {/* Dark palette thumbnail — swapped via CSS */}
+            {project.thumbDark && (
+              <Image
+                src={project.thumbDark}
+                alt={project.title}
+                fill
+                className="object-cover hidden dark-palette:block"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            )}
+          </>
+        ) : (
+          /* Solid spot color fallback for projects without a thumbnail */
+          <div
+            className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-80"
+            style={{ backgroundColor: spotColor }}
+          />
+        )}
+
+        {/* Index number — screen print register mark */}
+        <span className="absolute top-4 left-4 font-mono text-xs text-fg-base/20 group-hover:text-fg-on-alt/30 transition-colors z-10">
           {String(index + 1).padStart(2, '0')}
         </span>
       </div>

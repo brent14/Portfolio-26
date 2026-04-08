@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import { projects, getProjectBySlug, getAdjacentProjects } from '@/data/projects'
 
@@ -93,54 +94,63 @@ export default async function CaseStudyPage({ params }: Props) {
       {/* Body */}
       <article className="bg-bg-base">
         <div className="max-w-7xl mx-auto px-6 py-20">
-          <div className="grid md:grid-cols-3 gap-16">
-            {/* Body copy */}
-            <div className="md:col-span-2">
-              <p className="font-display text-xl md:text-2xl text-fg-base leading-relaxed">
-                {project.body}
-              </p>
+          {/* Body copy — full width */}
+          <div className="max-w-3xl mb-20">
+            <p className="font-display text-xl md:text-2xl text-fg-base leading-relaxed">
+              {project.body}
+            </p>
 
-              {/* Tech tags */}
-              <div className="flex flex-wrap gap-2 mt-14 pt-8 border-t border-charcoal/10">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="font-mono text-xs text-fg-base/50 border border-fg-base/15 px-2 py-1"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+            {/* Tech tags */}
+            <div className="flex flex-wrap gap-2 mt-14 pt-8 border-t border-fg-base/10">
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="font-mono text-xs text-fg-base/50 border border-fg-base/15 px-2 py-1"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
-
-            {/* Sidebar — spot color image placeholder */}
-            <aside>
-              <div className="aspect-[3/4] relative overflow-hidden">
-                <div
-                  className="absolute inset-0"
-                  style={{ backgroundColor: 'var(--color-spot-1)' }}
-                />
-                <div className="absolute bottom-4 left-4">
-                  <span className="font-mono text-xs text-fg-on-alt/30">Project image</span>
-                </div>
-              </div>
-            </aside>
           </div>
 
-          {/* Media grid placeholders */}
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="aspect-video relative overflow-hidden">
-                <div
-                  className="absolute inset-0"
-                  style={{ backgroundColor: i % 2 === 0 ? 'var(--color-spot-2)' : 'var(--color-spot-3)' }}
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-mono text-xs text-fg-base/20">Media {i}</span>
-                </div>
+          {/* Media grid — all images and videos */}
+          {(() => {
+            const allMedia: { type: 'image' | 'video'; src: string }[] = [
+              ...(project.images ?? []).map((src) => ({ type: 'image' as const, src })),
+              ...(project.videos ?? []).map((src) => ({ type: 'video' as const, src })),
+            ]
+            if (allMedia.length === 0) return null
+            const gridCols = 'grid-cols-1 md:grid-cols-2'
+            return (
+              <div className={`grid gap-4 ${gridCols}`}>
+                {allMedia.map((item, i) =>
+                  item.type === 'image' ? (
+                    <div key={i} className="relative overflow-hidden">
+                      <Image
+                        src={item.src}
+                        alt={`${project.title} ${i + 1}`}
+                        width={0}
+                        height={0}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  ) : (
+                    <div key={i}>
+                      <video
+                        src={item.src}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full"
+                      />
+                    </div>
+                  )
+                )}
               </div>
-            ))}
-          </div>
+            )
+          })()}
         </div>
       </article>
 
