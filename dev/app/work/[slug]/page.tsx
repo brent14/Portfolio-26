@@ -95,8 +95,8 @@ export default async function CaseStudyPage({ params }: Props) {
       <article className="bg-bg-base">
         <div className="max-w-7xl mx-auto px-6 py-20">
           {/* Body copy — full width */}
-          <div className="max-w-3xl mb-20">
-            <p className="font-display text-xl md:text-2xl text-fg-base leading-relaxed">
+          <div className="max-w-6xl mb-20">
+            <p className="font-display text-2xl md:text-3xl text-fg-base leading-relaxed">
               {project.body}
             </p>
 
@@ -105,7 +105,8 @@ export default async function CaseStudyPage({ params }: Props) {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="font-mono text-xs text-fg-base/50 border border-fg-base/15 px-2 py-1"
+                  className="font-mono text-base px-3 py-1.5"
+                  style={{ backgroundColor: 'var(--color-spot-2)', color: 'var(--color-bg-alt)' }}
                 >
                   {tag}
                 </span>
@@ -160,24 +161,32 @@ export default async function CaseStudyPage({ params }: Props) {
         style={{ backgroundColor: 'var(--color-bg-alt)' }}
       >
         <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between gap-8">
-          <div>
-            <p className="font-mono text-xs text-fg-on-alt/30 mb-2 tracking-widest uppercase">Previous</p>
-            <Link
-              href={`/work/${prev.slug}`}
-              className="font-display text-xl text-fg-on-alt hover:italic transition-all duration-300"
-            >
-              {prev.title}
-            </Link>
-          </div>
-          <div className="text-right">
-            <p className="font-mono text-xs text-fg-on-alt/30 mb-2 tracking-widest uppercase">Next</p>
-            <Link
-              href={`/work/${next.slug}`}
-              className="font-display text-xl text-fg-on-alt hover:italic transition-all duration-300"
-            >
-              {next.title}
-            </Link>
-          </div>
+          <Link href={`/work/${prev.slug}`} className="group flex flex-col gap-4 hover:opacity-70 transition-opacity duration-300">
+            <div>
+              <p className="font-mono text-base text-fg-on-alt font-bold mb-2 tracking-widest uppercase">Previous</p>
+              <span className="font-display text-3xl text-fg-on-alt">
+                {prev.title}
+              </span>
+            </div>
+            {prev.thumb && (
+              <div className="relative w-96 h-64 overflow-hidden shrink-0">
+                <Image src={prev.thumb} alt={prev.title} fill className="object-cover" sizes="384px" />
+              </div>
+            )}
+          </Link>
+          <Link href={`/work/${next.slug}`} className="group flex flex-col gap-4 md:items-end text-right hover:opacity-70 transition-opacity duration-300">
+            <div>
+              <p className="font-mono text-base text-fg-on-alt font-bold mb-2 tracking-widest uppercase">Next</p>
+              <span className="font-display text-3xl text-fg-on-alt">
+                {next.title}
+              </span>
+            </div>
+            {next.thumb && (
+              <div className="relative w-96 h-64 overflow-hidden shrink-0">
+                <Image src={next.thumb} alt={next.title} fill className="object-cover" sizes="384px" />
+              </div>
+            )}
+          </Link>
         </div>
       </div>
     </>

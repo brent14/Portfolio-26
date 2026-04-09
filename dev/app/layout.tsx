@@ -3,7 +3,6 @@ import { Sorts_Mill_Goudy, Average_Sans, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import PaletteSwitcher from '@/components/PaletteSwitcher'
 
 const sortsMillGoudy = Sorts_Mill_Goudy({
   subsets: ['latin'],
@@ -71,7 +70,6 @@ export default function RootLayout({
 <Nav />
         <main>{children}</main>
         <Footer />
-        <PaletteSwitcher />
       </body>
     </html>
   )

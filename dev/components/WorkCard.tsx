@@ -67,13 +67,13 @@ export default function WorkCard({ project, index }: WorkCardProps) {
           {project.filterTags.map((tag) => (
             <span
               key={tag}
-              className="font-mono text-[15px] text-fg-base"
+              className="font-mono text-[17px] text-fg-base"
             >
               {tag}
             </span>
           ))}
         </div>
-        <h3 className="font-display text-[26px] leading-snug text-fg-muted group-hover:italic transition-all duration-300">
+        <h3 className="font-display text-[26px] leading-snug text-fg-muted group-hover:opacity-60 transition-opacity duration-300">
           {project.title}
         </h3>
       </div>

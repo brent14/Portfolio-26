@@ -29,7 +29,7 @@ export default function Footer() {
               <Link
                 key={label}
                 href={href}
-                className="font-mono text-xs text-fg-on-alt/40 hover:text-fg-on-alt transition-colors tracking-widest uppercase"
+                className="font-mono text-sm text-fg-on-alt hover:text-fg-on-alt/50 transition-colors tracking-widest uppercase"
               >
                 {label}
               </Link>
@@ -38,20 +38,20 @@ export default function Footer() {
 
           <div className="flex gap-6">
             <a
-              href="https://github.com"
+              href="https://github.com/brent14"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="font-mono text-xs text-fg-on-alt/40 hover:text-fg-on-alt transition-colors tracking-widest uppercase"
+              className="font-mono text-sm text-fg-on-alt hover:text-fg-on-alt/50 transition-colors tracking-widest uppercase"
             >
               GitHub
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/brent-carlin/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="font-mono text-xs text-fg-on-alt/40 hover:text-fg-on-alt transition-colors tracking-widest uppercase"
+              className="font-mono text-sm text-fg-on-alt hover:text-fg-on-alt/50 transition-colors tracking-widest uppercase"
             >
               LinkedIn
             </a>

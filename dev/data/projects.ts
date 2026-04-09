@@ -16,7 +16,7 @@ export type FilterTag =
   | "Brand Campaign"
   | "CRM & Data"
   | "WordPress"
-  | "Platform Build"
+  | "Full Stack"
   | "DevOps"
   | "Mobile";
 
@@ -25,7 +25,7 @@ export const ALL_FILTER_TAGS: FilterTag[] = [
   "Brand Campaign",
   "CRM & Data",
   "WordPress",
-  "Platform Build",
+  "Full Stack",
   "DevOps",
   "Mobile",
 ];
@@ -63,7 +63,7 @@ export const projects: Project[] = [
       "Mobile",
       "GSAP",
     ],
-    filterTags: ["Animation", "Brand Campaign"],
+    filterTags: ["Animation", "Brand Campaign", "Mobile"],
     body: "Covergirl's Supersizer campaign needed a landing page built for a young audience. Animation was the core feature, a horizontal parallax side scroller letting the product story unfold without interrupting native interactions. Responsive across early mobile devices and legacy browsers, the experience held consistently wherever users landed. The campaign earned 40,000+ impressions over three months through in-store QR placements at Walmart.",
     thumb: "/work/images/covergirl-parallax-scroll-animation-thumb-light.jpg",
     thumbDark:
@@ -130,7 +130,7 @@ export const projects: Project[] = [
       "Nonprofit",
       "Form Validation",
     ],
-    filterTags: ["Platform Build", "CRM & Data"],
+    filterTags: ["Full Stack", "CRM & Data"],
     body: "The Herman Lucerne Memorial Tournament needed a website to support their ongoing philanthropy efforts and a registration portal for their annual fishing tournaments. I built the portal in Next.js, handling fisherman registration, tournament fees, and sponsorship collection through Stripe. Zod was used for input validation, ensuring data integrity and security across all form submissions.",
     thumb:
       "/work/images/nextjs-stripe-tournament-registration-portal-thumb-light.jpg",
@@ -151,7 +151,7 @@ export const projects: Project[] = [
       "Landing Page",
       "Higher Education",
     ],
-    filterTags: ["CRM & Data", "Platform Build"],
+    filterTags: ["CRM & Data", "Full Stack"],
     body: "The University of Miami Graduate Business School needed a lead generation system across 14 graduate programs. I developed all 14 landing pages using a shared component library, keeping each program consistent while allowing for program-specific content. The backend infrastructure routed each submission into a central database tied to the specific program. A data export integrated directly with Salesforce, giving the University's sales and marketing team clean, actionable lead data.",
     thumb:
       "/work/images/higher-education-lead-generation-salesforce-thumb-light.jpg",
@@ -198,7 +198,7 @@ export const projects: Project[] = [
       "Cross-Browser",
       "JavaScript",
     ],
-    filterTags: ["Mobile", "Platform Build"],
+    filterTags: ["Mobile", "Full Stack"],
     body: "Porsche needed a mobile web app to manage event schedules for their international dealer convention, a project that ran across two consecutive years. The app tracked events in real time, allowing attendees to follow different tracks and stay current across a full convention schedule. Built mobile-first and cross-browser compatible, the experience held consistently across devices for a global audience.",
     thumb: "/work/images/mobile-first-event-schedule-web-app-thumb-light.jpg",
     thumbDark:
@@ -238,7 +238,7 @@ export const projects: Project[] = [
       "PHP",
       "JavaScript",
     ],
-    filterTags: ["Platform Build", "CRM & Data"],
+    filterTags: ["Full Stack", "CRM & Data"],
     body: "I was part of a team handling daily fixes, feature requests, and UI/UX additions across the main newspaper site and 17 subsidiary papers. I also designed and developed special sections, including the University of Arkansas Athletics forums, Photo Section, and sitewide search. Search was powered by a Solr server indexing eight years of news articles, with third-party APIs integrated to expand the site's functionality.",
     thumb:
       "/work/images/multi-site-cms-platform-features-maintenance-thumb-light.jpg",
@@ -258,7 +258,7 @@ export const projects: Project[] = [
       "Data Visualization",
       "Stakeholder Management",
     ],
-    filterTags: ["Platform Build"],
+    filterTags: ["Full Stack"],
     body: "The Northwest Arkansas Democrat-Gazette needed a full-stack app to track local election results and display them in the newspaper's UI in real time. I built the full application, UI through backend, working directly with the newsroom manager to fulfill their requirements for election night. Results were published directly to the newspaper's website, updating every minute throughout the night as local races developed.",
     thumb:
       "/work/images/full-stack-real-time-news-election-app-thumb-light.jpg",
@@ -369,7 +369,7 @@ export const projects: Project[] = [
       "Tourism",
       "Real-Time Data",
     ],
-    filterTags: ["Brand Campaign", "Platform Build"],
+    filterTags: ["Brand Campaign"],
     body: "Visit Florida needed a tourism landing page to support a brand repositioning for the Treasure Coast. An Instagram integration showed user-generated content, letting real visitors tell the destination's story through their own photos. A real-time weather API gave tourists live conditions on the page, with comparisons to other tourist regions reinforcing what makes the Treasure Coast distinct.",
     thumb:
       "/work/images/florida-tourism-landing-page-brand-repositioning-thumb-light.jpg",
@@ -389,7 +389,7 @@ export const projects: Project[] = [
       "API Integration",
       "Event Website",
     ],
-    filterTags: ["Brand Campaign", "Platform Build"],
+    filterTags: ["Brand Campaign"],
     body: "Miami Boating Week needed a landing page to support a brand repositioning alongside an informational site for their annual boat convention. Google Maps API was integrated to surface the convention location, parking, and available docks, accounting for attendees arriving by both car and water.",
     thumb:
       "/work/images/event-landing-page-brand-repositioning-thumb-light.jpg",
