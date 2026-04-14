@@ -3,6 +3,8 @@ import { Sorts_Mill_Goudy, Average_Sans, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import { HoverBlendProvider } from '@/components/HoverBlendProvider'
+import HoverBlend from '@/components/HoverBlend'
 
 const sortsMillGoudy = Sorts_Mill_Goudy({
   subsets: ['latin'],
@@ -66,10 +68,12 @@ export default function RootLayout({
       className={`${sortsMillGoudy.variable} ${averageSans.variable} ${ibmPlexMono.variable}`}
     >
       <body>
-
-<Nav />
-        <main>{children}</main>
-        <Footer />
+        <HoverBlendProvider>
+          <HoverBlend />
+          <Nav />
+          <main>{children}</main>
+          <Footer />
+        </HoverBlendProvider>
       </body>
     </html>
   )

@@ -22,7 +22,7 @@ export default function WorkCard({ project, index }: WorkCardProps) {
   return (
     <Link
       href={`/work/${project.slug}`}
-      className="group block"
+      className="group block relative z-[1] bg-bg-base"
     >
       {/* Image area */}
       <div className="aspect-[4/3] relative overflow-hidden">

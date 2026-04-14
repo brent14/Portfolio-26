@@ -1,45 +1,34 @@
-# CONTRACT: Phase 2A — Design System
+# CONTRACT: Hover Blend Effect — Site-wide
 
-> Created: 2026-04-07
+> Created: 2026-04-14
 > Status: IN PROGRESS
 
 ## GOAL
-A polished design system applied across all pages — two spot-color palette with mix-blend-mode overlays creating screen print depth, Sorts Mill Goudy + Average Sans typography, editorial work cards with color overlay, halftone/grain texture, and a cohesive visual language ready for Phase 2B animation.
+A grid of small colored circles renders as a fixed overlay across every page, activating and scaling on mouse proximity via `mix-blend-mode`, with a context-based config system that lets any page swap colors or params without becoming a client component.
 
 ## CONSTRAINTS
-- Two palette variations built and togglable for review: (A) Cream + Red + Blue, (B) Cream/Gray + Chartreuse
-- Color overlays via CSS mix-blend-mode: multiply — no extra image assets for color effects
-- Halftone/grain texture via SVG filter or CSS — not raster images
-- Sorts Mill Goudy for H1/H2 headlines — replaces Rubik
-- Average Sans for body copy — replaces DM Sans
-- IBM Plex Mono stays for labels, tags, monospace elements
-- No changes to page structure or copy — design layer only
-- No animation yet — that's 2B
-- All 20 case study cards updated to editorial style
-- prefers-reduced-motion respected on hover transitions
-- TypeScript clean, build passes
+- `'use client'` only on the effect component and its provider — all pages stay as server components
+- No new npm packages — pure DOM + rAF, same as the prototype
+- `mix-blend-mode: multiply` as default; `blendMode` prop available in config for dark-palette variants
+- Colors default to the portfolio's existing spot palette (`--color-spot-1` through `spot-5`)
+- Must not interfere with existing `z-index` stack or pointer events on Nav, links, cards
+- TypeScript strict — no `any`
+- Follow project naming conventions (PascalCase components, camelCase hooks)
 
 ## FORMAT
-- app/globals.css — palette tokens, texture layer, font updates, palette B theme class
-- app/layout.tsx — font swap (Sorts Mill Goudy + Average Sans)
-- components/PaletteSwitcher.tsx — floating toggle for A/B comparison (dev tool)
-- components/Nav.tsx — typography + spacing polish
-- components/WorkCard.tsx — editorial redesign with color overlay on thumbnail
-- components/FilterBar.tsx — styling pass
-- components/Footer.tsx — styling pass
-- app/page.tsx — section design pass
-- app/work/[slug]/page.tsx — case study header + body layout polish
-- app/resume/page.tsx — typography pass
-- app/lab/page.tsx — card pass
+- `dev/components/HoverBlendProvider.tsx` — context, `HoverBlendConfig` type, `DEFAULT_CONFIG`, `useHoverBlend` hook
+- `dev/components/HoverBlend.tsx` — client component, reads context, owns the rAF loop and DOM grid
+- `dev/components/HoverBlendVariant.tsx` — null-rendered client component pages drop in to override config for their route (resets on unmount)
+- `dev/app/layout.tsx` — wrap body with `HoverBlendProvider`, render `<HoverBlend />` inside it
 
 ## AGENTS
-- [Before commit] Visual verifier — screenshots homepage, work grid, one case study (blocking)
+- [Before commit] Visual verifier — screenshots home, resume, and work pages to confirm effect renders and doesn't block UI (blocking)
 
 ## FAILURE (any = not done)
-- [ ] Palette B not visually distinct from A
-- [ ] Color overlays don't produce screen print layering effect
-- [ ] Sorts Mill Goudy or Average Sans not loading
-- [ ] Work cards still look like Phase 1 tiles
-- [ ] Grain/texture not visible at normal zoom
-- [ ] TypeScript errors
-- [ ] Any page looks broken or unstyled
+- [ ] Pages need to become `'use client'` to set a variant
+- [ ] Effect blocks clicks on nav, cards, or links
+- [ ] Grid circles appear above nav or other `z-index`-critical UI
+- [ ] Config change on page navigation doesn't take effect or doesn't reset on back-navigation
+- [ ] TypeScript errors in any new file
+- [ ] Effect visible on mobile/touch (should be mouse-only, gracefully idle on touch devices)
+- [ ] Build fails
