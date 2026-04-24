@@ -1,49 +1,80 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
+import HeroFluidFallback from '@/components/HeroFluidFallback'
 
-const HeroPlaceholder = dynamic(() => import('@/components/HeroPlaceholder'), {
+const HeroFluidScene = dynamic(() => import('@/components/HeroFluidScene'), {
   ssr: false,
 })
 
+function useFluidEligible() {
+  const [eligible, setEligible] = useState(false)
+
+  useEffect(() => {
+    const widthQuery = window.matchMedia('(min-width: 1024px)')
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+
+    const update = () => {
+      setEligible(widthQuery.matches && !motionQuery.matches)
+    }
+    update()
+
+    widthQuery.addEventListener('change', update)
+    motionQuery.addEventListener('change', update)
+    return () => {
+      widthQuery.removeEventListener('change', update)
+      motionQuery.removeEventListener('change', update)
+    }
+  }, [])
+
+  return eligible
+}
+
+function useVideoAspect(src: string) {
+  const [aspect, setAspect] = useState<number | null>(null)
+
+  useEffect(() => {
+    const video = document.createElement('video')
+    video.preload = 'metadata'
+    const onMeta = () => {
+      if (video.videoWidth > 0 && video.videoHeight > 0) {
+        setAspect(video.videoWidth / video.videoHeight)
+      }
+    }
+    video.addEventListener('loadedmetadata', onMeta)
+    video.src = src
+    return () => {
+      video.removeEventListener('loadedmetadata', onMeta)
+      video.removeAttribute('src')
+      video.load()
+    }
+  }, [src])
+
+  return aspect
+}
+
 export default function HeroSection() {
+  const eligible = useFluidEligible()
+  const aspect = useVideoAspect('/brent_2.mp4')
+
+  if (!eligible) {
+    return (
+      <section className="relative w-full bg-bg-base overflow-hidden">
+        <HeroFluidFallback />
+      </section>
+    )
+  }
+
   return (
-    <section className="relative min-h-screen flex items-end bg-bg-base overflow-hidden">
-      <HeroPlaceholder />
-
-      {/* Spot color blocks — screen print bleed elements */}
-      <div
-        className="absolute top-0 right-0 w-72 h-72 pointer-events-none"
-        style={{ backgroundColor: 'var(--color-spot-2)' }}
-      />
-      <div
-        className="absolute top-32 right-32 w-48 h-48 pointer-events-none"
-        style={{ backgroundColor: 'var(--color-spot-1)' }}
-      />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 w-full">
-        {/* Register mark — screen print detail */}
-        <p className="font-mono text-xs text-fg-base/30 mb-6 tracking-widest uppercase">
-          Full-Stack Developer · South Florida
-        </p>
-        <h1 className="font-display text-6xl md:text-8xl lg:text-9xl text-fg-base leading-[0.95] max-w-5xl">
-          Websites{' '}
-          <span className="italic" style={{ color: 'var(--color-spot-1)' }}>
-            &amp;
-          </span>{' '}
-          digital experiences
-          <br />
-          <span className="text-fg-base/35">for brands that move people.</span>
-          <br />
-          15 years.
-        </h1>
-
-        {/* Scroll cue */}
-        <div className="mt-16 flex items-center gap-3">
-          <div className="w-8 h-px bg-fg-base/30" />
-          <span className="font-mono text-xs text-fg-base/30 tracking-widest uppercase">Scroll</span>
-        </div>
-      </div>
+    <section
+      className="relative w-full bg-bg-base overflow-hidden"
+      style={{
+        aspectRatio: aspect ?? 16 / 9,
+        maxHeight: '100svh',
+      }}
+    >
+      <HeroFluidScene />
     </section>
   )
 }
