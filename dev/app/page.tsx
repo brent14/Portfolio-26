@@ -66,7 +66,7 @@ export default function HomePage() {
           style={{ backgroundColor: 'var(--color-spot-1)' }}
         />
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-32">
-          <p className="font-display text-2xl md:text-3xl lg:text-4xl text-fg-base leading-relaxed">
+          <p className="font-display text-[28px] text-fg-base leading-relaxed">
             For over 15 years, I&apos;ve built websites and digital experiences for brands
             ranging from global automotive dealers to nonprofit advocacy groups. My work
             spans the full stack, from WebGL/GSAP-driven animations to CRM integrations to
