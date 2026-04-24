@@ -12,7 +12,7 @@ The homepage hero displays `brent_1.mp4` full-bleed by default; mouse movement d
 - SSR disabled on the canvas component (`dynamic(..., { ssr: false })`)
 - GLSL ported **verbatim** from `FEATURE_IDEAS/hero-header/shaders.js` — HSV mask math, fluid sim, display compositing all preserved
 - Render pipeline ported from `FEATURE_IDEAS/hero-header/script.js` — ping-pong `WebGLRenderTarget`s, two fluid sims, matrix-rain `CanvasTexture`
-- Orange mask is **literal `#E96F53`** — not palette-reactive, not bound to CSS vars
+- Orange mask is **literal `#E38F4C`** — not palette-reactive, not bound to CSS vars
 - Matrix rain kept as-is from the reference (colors may be tuned later, not in this phase)
 - Videos `brent_1.mp4` and `brent_2.mp4` served from `dev/public/` (already staged), muted + autoplay + `playsInline` + `loop`
 - Canvas is `position: absolute; inset: 0` inside the hero section, full viewport height (`100svh`), `overflow: hidden`

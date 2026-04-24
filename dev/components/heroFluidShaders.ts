@@ -163,7 +163,7 @@ export const displayFragmentShader = /* glsl */ `
     float tA = smoothstep(threshold, threshold + edgeWidth, noisyFluidA);
     float tB = smoothstep(threshold, threshold + edgeWidth, noisyFluidB);
 
-    // Detect #E96F53 orange (hue ~11°, sat ~0.64, val ~0.91) in the middle layer
+    // Detect #E38F4C orange (hue ~27°, sat ~0.67, val ~0.89) in the middle layer
     vec3 c = middleColor.rgb;
     vec4 K = vec4(0.0, -1.0/3.0, 2.0/3.0, -1.0);
     vec4 p = mix(vec4(c.bg, K.wz), vec4(c.gb, K.xy), step(c.b, c.g));
@@ -171,7 +171,7 @@ export const displayFragmentShader = /* glsl */ `
     float d = q.x - min(q.w, q.y);
     vec3 hsv = vec3(abs(q.z + (q.w - q.y) / (6.0 * d + 1e-10)), d / (q.x + 1e-10), q.x);
 
-    float hueMatch = 1.0 - smoothstep(0.045, 0.075, hsv.x);
+    float hueMatch = smoothstep(0.044, 0.074, hsv.x) * (1.0 - smoothstep(0.074, 0.104, hsv.x));
     float isOrange = hueMatch * smoothstep(0.4, 0.6, hsv.y) * smoothstep(0.4, 0.7, hsv.z);
     float fluidMask = 1.0 - isOrange;
 
