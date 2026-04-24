@@ -96,7 +96,7 @@ export default async function CaseStudyPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6 py-20">
           {/* Body copy — full width */}
           <div className="max-w-6xl mb-20">
-            <p className="font-display text-2xl md:text-3xl text-fg-base leading-relaxed">
+            <p className="relative z-[1] bg-bg-base font-display text-2xl md:text-3xl text-fg-base leading-relaxed">
               {project.body}
             </p>
 
