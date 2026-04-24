@@ -41,6 +41,11 @@ export default function Nav() {
           ? 'bg-bg-base/95 backdrop-blur-sm border-b border-fg-base/10'
           : 'bg-transparent'
       }`}
+      style={
+        !scrolled && isDark
+          ? { backgroundColor: 'var(--color-spot-1)' }
+          : undefined
+      }
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="font-display text-xl text-fg-base">

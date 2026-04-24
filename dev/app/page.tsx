@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import WorkGrid from '@/components/WorkGrid'
 import HeroSection from '@/components/HeroSection'
 
@@ -66,14 +67,13 @@ export default function HomePage() {
         />
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-32">
           <p className="font-display text-2xl md:text-3xl lg:text-4xl text-fg-base leading-relaxed">
-            Over 15 years, I&apos;ve built websites and digital experiences for brands
+            For over 15 years, I&apos;ve built websites and digital experiences for brands
             ranging from global automotive dealers to nonprofit advocacy groups. My work
-            spans the full stack, from GSAP-driven and WebGL animations to CRM
-            integrations, platform architecture, and the DevOps infrastructure that keeps
-            it all running. I have collaborated closely with art directors, brand teams,
-            and engineers, treating animation as storytelling and technical decisions as
-            brand decisions. The approach that unifies all these projects is to build
-            something that works as well as it feels.
+            spans the full stack, from WebGL/GSAP-driven animations to CRM integrations to
+            platform architecture, and the DevOps infrastructure that keeps it all running.
+            I have collaborated closely with art directors, brand teams, and engineers,
+            treating animations as storytelling and technical decisions as brand decisions.
+            My building approach is to build something that works as well it feels.
           </p>
         </div>
       </section>
@@ -103,27 +103,34 @@ export default function HomePage() {
                 About
               </h2>
               <p className="font-sans text-[22px] text-fg-on-alt/75 leading-relaxed">
-                For 15 years I&apos;ve had the pleasure of building websites and digital
-                experiences from global automotive brands to scrappy nonprofits and
-                everything in between. Most of that work is the unglamorous kind: the CRM
-                pipelines, CMS architecture, and DevOps infrastructure that makes
-                everything else possible. But every now and then I get to make something
-                move, and that&apos;s where the real satisfaction lives. My favorite
-                projects are the animation ones, where motion complements the message and
-                says something more than static design. Based in South Florida, when
-                I&apos;m not pushing code and pixels I&apos;m noodling with electronics,
-                screen printing, or trying to grow my hot pepper empire.
+                I&apos;ve had the pleasure of building websites and digital experiences
+                from global automotive brands to scrappy nonprofits and everything in
+                between. Most of that work is the unglamorous kind: the CRM pipelines,
+                CMS architecture, and DevOps infrastructure that makes everything else
+                possible. But every now and then I get to make something move, and
+                that&apos;s where the real satisfaction lives. My favorite projects are
+                the animation ones, where motion complements the message and says
+                something more than static design. Based in South Florida, when I&apos;m
+                not pushing code and pixels I&apos;m noodling with electronics, screen
+                printing, or trying to grow my hot pepper empire.
               </p>
             </div>
-            {/* Portrait placeholder */}
+            {/* Portrait */}
             <div className="aspect-[3/4] relative overflow-hidden">
-              <div
-                className="absolute inset-0"
-                style={{ backgroundColor: 'var(--color-spot-2)' }}
+              <Image
+                src="/about-brent-light.jpg"
+                alt="Brent Carlin"
+                fill
+                className="object-cover dark-palette:hidden"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 flex items-end p-6">
-                <span className="font-mono text-xs text-fg-on-alt/30">Portrait photo</span>
-              </div>
+              <Image
+                src="/about-brent-dark.jpg"
+                alt="Brent Carlin"
+                fill
+                className="object-cover hidden dark-palette:block"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>
