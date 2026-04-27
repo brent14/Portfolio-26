@@ -38,7 +38,7 @@ const experience = [
     title: 'Front End Developer — Freelance',
     period: 'Jan 2014 – Apr 2015',
     description:
-      "I worked with art directors to develop engaging landing page UI's for Covergirl, Crest, and Pampers. I also developed banner ads for Duracell, Metamucil and Hasbro.",
+      "I worked with art directors to develop engaging landing page UI's for CoverGirl, Crest, and Pampers. I also developed banner ads for Duracell, Metamucil and Hasbro.",
     stack: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'GSAP', 'Git', 'Banner Ads', 'DoubleClick for Publishers'],
   },
   {

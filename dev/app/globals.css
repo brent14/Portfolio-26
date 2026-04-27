@@ -6,6 +6,7 @@
   --font-sans: var(--font-average-sans);
   --font-display: var(--font-sorts-mill-goudy);
   --font-mono: var(--font-ibm-plex-mono);
+  --font-tiny5: 'Tiny5', system-ui, sans-serif;
 
   /* Switchable tokens — defaults match light palette */
   --color-bg-base: #F0F4DA;

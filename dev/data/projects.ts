@@ -34,7 +34,7 @@ export const projects: Project[] = [
   {
     slug: "real-time-campaign-gsap-animation",
     title: "Porsche Expedition Cayenne",
-    headline: "Animated as it happened — Porsche Expedition Cayenne.",
+    headline: "Animated as it happened; Porsche Expedition Cayenne.",
     tags: [
       "JavaScript",
       "GSAP",
@@ -45,15 +45,15 @@ export const projects: Project[] = [
       "CSS",
     ],
     filterTags: ["Animation", "Brand Campaign"],
-    body: "Porsche's Expedition Cayenne campaign needed a website that could keep pace with a real journey across South America. GSAP-driven SVG animations tracked the Cayenne's progress region by region, surfacing the car features that made each leg of the drive possible. The site updated in near real time as drivers uploaded images and video from remote locations along the route. Deployed across all Latin American markets, the experience wove together feature storytelling and social media activations from the road.",
+    body: "Porsche's Expedition Cayenne campaign needed a website that could keep pace with a real journey across South America. A GSAP-driven SVG animations tracked the Cayenne's progress region by region, surfacing the car features that made each leg of the drive possible. The site updated in near real time as drivers uploaded images and video from remote locations along the route. Incorporating all of Porsche's Latin American markets, the experience wove together feature storytelling and social media activations from the road.",
     thumb: "/work/images/real-time-campaign-gsap-animation-thumb-light.jpg",
     thumbDark: "/work/images/real-time-campaign-gsap-animation-thumb-dark.jpg",
     videos: ["/work/video/real-time-campaign-gsap-animation.mp4"],
   },
   {
     slug: "covergirl-parallax-scroll-animation",
-    title: "Covergirl Supersizer",
-    headline: "Motion as product story — Covergirl Supersizer.",
+    title: "CoverGirl Supersizer",
+    headline: "Motion as product story; CoverGirl Supersizer.",
     tags: [
       "JavaScript",
       "Parallax",
@@ -64,7 +64,7 @@ export const projects: Project[] = [
       "GSAP",
     ],
     filterTags: ["Animation", "Brand Campaign", "Mobile"],
-    body: "Covergirl's Supersizer campaign needed a landing page built for a young audience. Animation was the core feature, a horizontal parallax side scroller letting the product story unfold without interrupting native interactions. Responsive across early mobile devices and legacy browsers, the experience held consistently wherever users landed. The campaign earned 40,000+ impressions over three months through in-store QR placements at Walmart.",
+    body: "CoverGirl's Supersizer campaign needed a landing page built for a young audience. Animation was used at as the core feature, a horizontal parallax side scroller letting the product story unfold without interrupting native interactions. Responsive across early mobile devices and legacy browsers, the experience held consistently across possible differeing screen sizes. The campaign earned 40,000+ impressions over three months through in-store QR placements at Walmart.",
     thumb: "/work/images/covergirl-parallax-scroll-animation-thumb-light.jpg",
     thumbDark:
       "/work/images/covergirl-parallax-scroll-animation-thumb-dark.jpg",
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     slug: "multi-market-landing-pages-crm",
     title: "Porsche Latin America Dealer Landing Pages",
     headline:
-      "After-sales infrastructure built for 16 markets — Porsche LATAM.",
+      "After-sales infrastructure built for 16 markets; Porsche LATAM.",
     tags: [
       "CRM Integration",
       "Lead Collection",
@@ -99,7 +99,7 @@ export const projects: Project[] = [
   {
     slug: "wordpress-boat-dealer-locator-crm",
     title: "Invincible Boats",
-    headline: "From boat builder to dealer network — Invincible Boats.",
+    headline: "From boat builder to dealer network; Invincible Boats.",
     tags: [
       "WordPress",
       "PHP",
@@ -120,7 +120,7 @@ export const projects: Project[] = [
     slug: "nextjs-stripe-tournament-registration-portal",
     title: "Herman Lucerne Memorial Tournament",
     headline:
-      "Tournament registration built for a fishing community — Herman Lucerne.",
+      "Tournament registration built for a fishing community; Herman Lucerne.",
     tags: [
       "Next.js",
       "Stripe",
@@ -140,7 +140,7 @@ export const projects: Project[] = [
   {
     slug: "higher-education-lead-generation-salesforce",
     title: "University of Miami Graduate Business School",
-    headline: "14 programs, one lead generation system — University of Miami.",
+    headline: "14 programs, one lead generation system; University of Miami.",
     tags: [
       "PHP",
       "JavaScript",
@@ -166,7 +166,7 @@ export const projects: Project[] = [
     slug: "nonprofit-gsap-svg-animation-wordpress",
     title: "Captains for Clean Water",
     headline:
-      "The story of local captains fighting for Florida's water — Captains for Clean Water.",
+      "The story of local captains fighting for Florida's water; Captains for Clean Water.",
     tags: [
       "JavaScript",
       "GSAP",
@@ -189,7 +189,7 @@ export const projects: Project[] = [
   {
     slug: "mobile-first-event-schedule-web-app",
     title: "Porsche Convention Events",
-    headline: "The convention in your pocket — Porsche Convention Events.",
+    headline: "The convention in your pocket; Porsche Convention Events.",
     tags: [
       "Mobile Web App",
       "Real-Time",
@@ -207,7 +207,7 @@ export const projects: Project[] = [
   {
     slug: "wordpress-boat-dealer-website-crm",
     title: "Yellowfin Boats",
-    headline: "Same platform, distinct identity — Yellowfin Boats.",
+    headline: "Same platform, distinct identity; Yellowfin Boats.",
     tags: [
       "WordPress",
       "PHP",
@@ -227,7 +227,7 @@ export const projects: Project[] = [
   {
     slug: "multi-site-cms-platform-features-maintenance",
     title: "NWA Online",
-    headline: "17 sites, two platforms, eight years of news — NWA Online.",
+    headline: "17 sites, two platforms, eight years of news; NWA Online.",
     tags: [
       "CMS Management",
       "Solr",
@@ -248,7 +248,7 @@ export const projects: Project[] = [
   {
     slug: "full-stack-real-time-news-election-app",
     title: "NWA Democrat-Gazette: Election App",
-    headline: "Local races, live — NWA Democrat-Gazette Election App.",
+    headline: "Local races, live; NWA Democrat-Gazette Election App.",
     tags: [
       "Full-Stack Development",
       "Real-Time Data",
@@ -268,7 +268,7 @@ export const projects: Project[] = [
   {
     slug: "animated-gsap-banners-mercury",
     title: "Mercury: Repower",
-    headline: "Big engine, subtle animations — Mercury Repower.",
+    headline: "Big engine, subtle animations; Mercury Repower.",
     tags: [
       "HTML5 Banners",
       "GSAP",
@@ -292,7 +292,7 @@ export const projects: Project[] = [
     slug: "santa-margherita-uncork-extraordinary-animation",
     title: "Santa Margherita: Uncork Extraordinary",
     headline:
-      "Making randomness feel alive — Santa Margherita Uncork Extraordinary.",
+      "Making randomness feel alive; Santa Margherita Uncork Extraordinary.",
     tags: [
       "HTML5 Banners",
       "GSAP",
@@ -315,7 +315,7 @@ export const projects: Project[] = [
   {
     slug: "virgin-voyages-launch-campaign-animation-banners",
     title: "Virgin Voyages: Launch Campaign",
-    headline: "A ship reveal, frame by frame — Virgin Voyages Launch Campaign.",
+    headline: "A ship reveal, frame by frame; Virgin Voyages Launch Campaign.",
     tags: [
       "HTML5 Banners",
       "GSAP",
@@ -339,7 +339,7 @@ export const projects: Project[] = [
   {
     slug: "porsche-social-augmented-reality-filter",
     title: "Porsche: Instagram AR Filter",
-    headline: "Social activation, built in AR — Porsche Jamaica.",
+    headline: "Social activation, built in AR; Porsche Jamaica.",
     tags: [
       "AR Filter",
       "Meta Spark",
@@ -360,7 +360,7 @@ export const projects: Project[] = [
   {
     slug: "florida-tourism-landing-page-brand-repositioning",
     title: "Visit Florida: Treasure Coast",
-    headline: "The Treasure Coast, don't come here — Visit Florida.",
+    headline: "The Treasure Coast, don't come here; Visit Florida.",
     tags: [
       "Branded Landing Page",
       "API Integration",
@@ -382,7 +382,7 @@ export const projects: Project[] = [
   {
     slug: "event-landing-page-brand-repositioning",
     title: "Miami Boating Week",
-    headline: "On the water and on the map — Miami Boating Week.",
+    headline: "On the water and on the map; Miami Boating Week.",
     tags: [
       "Google Maps API",
       "Branded Landing Page",
@@ -400,7 +400,7 @@ export const projects: Project[] = [
   {
     slug: "html-email-templates-crm-marketing-integration",
     title: "Email Template Development",
-    headline: "Brand email, built to scale — Email Template Development.",
+    headline: "Brand email, built to scale; Email Template Development.",
     tags: [
       "HTML Email",
       "Email Templates",
@@ -440,7 +440,7 @@ export const projects: Project[] = [
     slug: "devops-architecture-aws-cloudflare-security",
     title: "DevOps Architecture & Operations",
     headline:
-      "The infrastructure behind the work — DevOps Architecture & Operations.",
+      "The infrastructure behind the work; DevOps Architecture & Operations.",
     tags: [
       "DevOps",
       "CI/CD",

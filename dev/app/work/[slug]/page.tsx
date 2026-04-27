@@ -68,12 +68,6 @@ export default async function CaseStudyPage({ params }: Props) {
         className="min-h-[60vh] relative flex items-end pt-24 overflow-hidden"
         style={{ backgroundColor: 'var(--color-bg-alt)' }}
       >
-        {/* Spot color block — bottom-right corner */}
-        <div
-          className="absolute bottom-0 right-0 w-1/2 h-3/4 pointer-events-none"
-          style={{ backgroundColor: 'var(--color-spot-1)' }}
-        />
-
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-16 w-full">
           <div className="flex flex-wrap gap-2 mb-6">
             {project.filterTags.map((tag) => (

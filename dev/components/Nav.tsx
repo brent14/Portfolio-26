@@ -48,7 +48,7 @@ export default function Nav() {
       }
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="font-display text-xl text-fg-base">
+        <Link href="/" className="font-tiny5 text-[2.16rem] text-fg-base tracking-wider uppercase">
           Brent Carlin
         </Link>
 
