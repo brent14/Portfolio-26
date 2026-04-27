@@ -244,6 +244,11 @@ export const projects: Project[] = [
     body: "Yellowfin Boats required the same core feature set as Invincible Boats, including a territory-based dealer locator, CRM lead routing, API-integrated boat builder, and a used boat classifieds section, built to a distinct brand identity and layout. Each component was adapted to match Yellowfin's branding, ensuring a cohesive experience across the full platform. Ongoing news and events maintenance kept the brand presence current after launch.",
     thumb: "/work/images/wordpress-boat-dealer-website-crm-thumb-light.jpg",
     thumbDark: "/work/images/wordpress-boat-dealer-website-crm-thumb-dark.jpg",
+     images: [
+      "/work/images/wordpress-boat-dealer-website-crm.jpg",
+      "/work/images/wordpress-boat-dealer-website-crm-2.png",
+       "/work/images/wordpress-boat-dealer-website-crm-3.png",
+    ],
   },
   {
     slug: "multi-site-cms-platform-features-maintenance",
@@ -265,6 +270,8 @@ export const projects: Project[] = [
       "/work/images/multi-site-cms-platform-features-maintenance-thumb-light.jpg",
     thumbDark:
       "/work/images/multi-site-cms-platform-features-maintenance-thumb-dark.jpg",
+     images: [
+      "/work/images/multi-site-cms-platform-features-maintenance.jpg"] 
   },
   {
     slug: "full-stack-real-time-news-election-app",
@@ -285,6 +292,9 @@ export const projects: Project[] = [
       "/work/images/full-stack-real-time-news-election-app-thumb-light.jpg",
     thumbDark:
       "/work/images/full-stack-real-time-news-election-app-thumb-dark.jpg",
+       images: [
+      "/work/images/full-stack-real-time-news-election-app.jpg"
+    ],
   },
   {
     slug: "animated-gsap-banners-mercury",
@@ -419,6 +429,7 @@ export const projects: Project[] = [
       "/work/images/event-landing-page-brand-repositioning-thumb-dark.jpg",
        images: [
       "/work/images/event-landing-page-brand-repositioning.jpg",
+      "/work/images/event-landing-page-brand-repositioning-2.jpg",
     ],
   },
 
