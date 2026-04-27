@@ -34,7 +34,7 @@ export const projects: Project[] = [
   {
     slug: "real-time-campaign-gsap-animation",
     title: "Porsche Expedition Cayenne",
-    headline: "Animated as it happened; Porsche Expedition Cayenne.",
+    headline: "Animated as it happened: Porsche Expedition Cayenne.",
     tags: [
       "JavaScript",
       "GSAP",
@@ -49,11 +49,16 @@ export const projects: Project[] = [
     thumb: "/work/images/real-time-campaign-gsap-animation-thumb-light.jpg",
     thumbDark: "/work/images/real-time-campaign-gsap-animation-thumb-dark.jpg",
     videos: ["/work/video/real-time-campaign-gsap-animation.mp4"],
+    images: [
+      "/work/images/real-time-campaign-gsap-animation.jpg",
+      "/work/images/real-time-campaign-gsap-animation-2.jpg",
+      "/work/images/real-time-campaign-gsap-animation-3.jpg"
+    ],
   },
   {
     slug: "covergirl-parallax-scroll-animation",
     title: "CoverGirl Supersizer",
-    headline: "Motion as product story; CoverGirl Supersizer.",
+    headline: "Motion as product story: CoverGirl Supersizer.",
     tags: [
       "JavaScript",
       "Parallax",
@@ -76,7 +81,7 @@ export const projects: Project[] = [
     slug: "multi-market-landing-pages-crm",
     title: "Porsche Latin America Dealer Landing Pages",
     headline:
-      "After-sales infrastructure built for 16 markets; Porsche LATAM.",
+      "After-sales infrastructure built for 16 markets: Porsche LATAM.",
     tags: [
       "CRM Integration",
       "Lead Collection",
@@ -99,7 +104,7 @@ export const projects: Project[] = [
   {
     slug: "wordpress-boat-dealer-locator-crm",
     title: "Invincible Boats",
-    headline: "From boat builder to dealer network; Invincible Boats.",
+    headline: "From boat builder to dealer network: Invincible Boats.",
     tags: [
       "WordPress",
       "PHP",
@@ -115,12 +120,16 @@ export const projects: Project[] = [
     body: "Invincible Boats needed a new branded website that could serve both customers and their dealer network. I built a territory-based dealer locator with CRM lead routing, ensuring each inquiry reached the right dealer based on their sales territory. A custom boat builder was integrated via API, alongside a classifieds section for used boat listings, giving customers a complete ownership experience in one platform. Ongoing news and events maintenance kept the brand presence current after launch.",
     thumb: "/work/images/wordpress-boat-dealer-locator-crm-thumb-light.jpg",
     thumbDark: "/work/images/wordpress-boat-dealer-locator-crm-thumb-dark.jpg",
+     images: [
+      "/work/images/wordpress-boat-dealer-locator-crm.jpg",
+    ],
+    videos: ["/work/video/wordpress-boat-dealer-locator-crm.mp4"],
   },
   {
     slug: "nextjs-stripe-tournament-registration-portal",
     title: "Herman Lucerne Memorial Tournament",
     headline:
-      "Tournament registration built for a fishing community; Herman Lucerne.",
+      "Tournament registration built for a fishing community: Herman Lucerne.",
     tags: [
       "Next.js",
       "Stripe",
@@ -136,11 +145,15 @@ export const projects: Project[] = [
       "/work/images/nextjs-stripe-tournament-registration-portal-thumb-light.jpg",
     thumbDark:
       "/work/images/nextjs-stripe-tournament-registration-portal-thumb-dark.jpg",
+       images: [
+      "/work/images/nextjs-stripe-tournament-registration-portal.jpg",
+      "/work/images/nextjs-stripe-tournament-registration-portal-2.jpg",
+    ],
   },
   {
     slug: "higher-education-lead-generation-salesforce",
     title: "University of Miami Graduate Business School",
-    headline: "14 programs, one lead generation system; University of Miami.",
+    headline: "14 programs, one lead generation system: University of Miami.",
     tags: [
       "PHP",
       "JavaScript",
@@ -158,6 +171,7 @@ export const projects: Project[] = [
     thumbDark:
       "/work/images/higher-education-lead-generation-salesforce-thumb-dark.jpg",
     images: [
+      "/work/images/higher-education-lead-generation-salesforce.jpg",
       "/work/images/higher-education-lead-generation-salesforce-2.jpg",
       "/work/images/higher-education-lead-generation-salesforce-3.jpg",
     ],
@@ -166,7 +180,7 @@ export const projects: Project[] = [
     slug: "nonprofit-gsap-svg-animation-wordpress",
     title: "Captains for Clean Water",
     headline:
-      "The story of local captains fighting for Florida's water; Captains for Clean Water.",
+      "The story of local captains fighting for Florida's water: Captains for Clean Water.",
     tags: [
       "JavaScript",
       "GSAP",
@@ -184,12 +198,15 @@ export const projects: Project[] = [
     thumbDark:
       "/work/images/nonprofit-gsap-svg-animation-wordpress-thumb-dark.jpg",
     videos: ["/work/video/nonprofit-gsap-svg-animation-wordpress.mp4"],
+    images: [
+      "/work/images/nonprofit-gsap-svg-animation-wordpress.jpg",
+    ],
   },
 
   {
     slug: "mobile-first-event-schedule-web-app",
     title: "Porsche Convention Events",
-    headline: "The convention in your pocket; Porsche Convention Events.",
+    headline: "The convention in your pocket: Porsche Convention Events.",
     tags: [
       "Mobile Web App",
       "Real-Time",
@@ -203,11 +220,15 @@ export const projects: Project[] = [
     thumb: "/work/images/mobile-first-event-schedule-web-app-thumb-light.jpg",
     thumbDark:
       "/work/images/mobile-first-event-schedule-web-app-thumb-dark.jpg",
+      images: [
+      "/work/images/mobile-first-event-schedule-web-app.jpg",
+      "/work/images/mobile-first-event-schedule-web-app-2.jpg",
+    ],
   },
   {
     slug: "wordpress-boat-dealer-website-crm",
     title: "Yellowfin Boats",
-    headline: "Same platform, distinct identity; Yellowfin Boats.",
+    headline: "Same platform, distinct identity: Yellowfin Boats.",
     tags: [
       "WordPress",
       "PHP",
@@ -227,7 +248,7 @@ export const projects: Project[] = [
   {
     slug: "multi-site-cms-platform-features-maintenance",
     title: "NWA Online",
-    headline: "17 sites, two platforms, eight years of news; NWA Online.",
+    headline: "17 sites, two platforms, eight years of news: NWA Online.",
     tags: [
       "CMS Management",
       "Solr",
@@ -248,7 +269,7 @@ export const projects: Project[] = [
   {
     slug: "full-stack-real-time-news-election-app",
     title: "NWA Democrat-Gazette: Election App",
-    headline: "Local races, live; NWA Democrat-Gazette Election App.",
+    headline: "Local races, live: NWA Democrat-Gazette Election App.",
     tags: [
       "Full-Stack Development",
       "Real-Time Data",
@@ -268,7 +289,7 @@ export const projects: Project[] = [
   {
     slug: "animated-gsap-banners-mercury",
     title: "Mercury: Repower",
-    headline: "Big engine, subtle animations; Mercury Repower.",
+    headline: "Big engine, subtle animations: Mercury Repower.",
     tags: [
       "HTML5 Banners",
       "GSAP",
@@ -292,7 +313,7 @@ export const projects: Project[] = [
     slug: "santa-margherita-uncork-extraordinary-animation",
     title: "Santa Margherita: Uncork Extraordinary",
     headline:
-      "Making randomness feel alive; Santa Margherita Uncork Extraordinary.",
+      "Making randomness feel alive: Santa Margherita Uncork Extraordinary.",
     tags: [
       "HTML5 Banners",
       "GSAP",
@@ -315,7 +336,7 @@ export const projects: Project[] = [
   {
     slug: "virgin-voyages-launch-campaign-animation-banners",
     title: "Virgin Voyages: Launch Campaign",
-    headline: "A ship reveal, frame by frame; Virgin Voyages Launch Campaign.",
+    headline: "A ship reveal, frame by frame: Virgin Voyages Launch Campaign.",
     tags: [
       "HTML5 Banners",
       "GSAP",
@@ -339,7 +360,7 @@ export const projects: Project[] = [
   {
     slug: "porsche-social-augmented-reality-filter",
     title: "Porsche: Instagram AR Filter",
-    headline: "Social activation, built in AR; Porsche Jamaica.",
+    headline: "Social activation, built in AR: Porsche Jamaica.",
     tags: [
       "AR Filter",
       "Meta Spark",
@@ -360,7 +381,7 @@ export const projects: Project[] = [
   {
     slug: "florida-tourism-landing-page-brand-repositioning",
     title: "Visit Florida: Treasure Coast",
-    headline: "The Treasure Coast, don't come here; Visit Florida.",
+    headline: "The Treasure Coast, don't come here: Visit Florida.",
     tags: [
       "Branded Landing Page",
       "API Integration",
@@ -378,11 +399,12 @@ export const projects: Project[] = [
     images: [
       "/work/images/florida-tourism-landing-page-brand-repositioning.png",
     ],
+    videos: ["/work/video/florida-tourism-landing-page-brand-repositioning.mp4"],
   },
   {
     slug: "event-landing-page-brand-repositioning",
     title: "Miami Boating Week",
-    headline: "On the water and on the map; Miami Boating Week.",
+    headline: "On the water and on the map: Miami Boating Week.",
     tags: [
       "Google Maps API",
       "Branded Landing Page",
@@ -395,12 +417,15 @@ export const projects: Project[] = [
       "/work/images/event-landing-page-brand-repositioning-thumb-light.jpg",
     thumbDark:
       "/work/images/event-landing-page-brand-repositioning-thumb-dark.jpg",
+       images: [
+      "/work/images/event-landing-page-brand-repositioning.jpg",
+    ],
   },
 
   {
     slug: "html-email-templates-crm-marketing-integration",
     title: "Email Template Development",
-    headline: "Brand email, built to scale; Email Template Development.",
+    headline: "Brand email, built to scale: Email Template Development.",
     tags: [
       "HTML Email",
       "Email Templates",
@@ -440,7 +465,7 @@ export const projects: Project[] = [
     slug: "devops-architecture-aws-cloudflare-security",
     title: "DevOps Architecture & Operations",
     headline:
-      "The infrastructure behind the work; DevOps Architecture & Operations.",
+      "The infrastructure behind the work: DevOps Architecture & Operations.",
     tags: [
       "DevOps",
       "CI/CD",
@@ -459,6 +484,9 @@ export const projects: Project[] = [
       "/work/images/devops-architecture-aws-cloudflare-security-thumb-light.jpg",
     thumbDark:
       "/work/images/devops-architecture-aws-cloudflare-security-thumb-dark.jpg",
+      images: [
+      "/work/images/devops-architecture-aws-cloudflare-security.jpg",
+    ],
   },
 ];
 

@@ -111,8 +111,8 @@ export default async function CaseStudyPage({ params }: Props) {
           {/* Media grid — all images and videos */}
           {(() => {
             const allMedia: { type: 'image' | 'video'; src: string }[] = [
-              ...(project.images ?? []).map((src) => ({ type: 'image' as const, src })),
               ...(project.videos ?? []).map((src) => ({ type: 'video' as const, src })),
+              ...(project.images ?? []).map((src) => ({ type: 'image' as const, src })),
             ]
             if (allMedia.length === 0) return null
             const gridCols = 'grid-cols-1 md:grid-cols-2'
