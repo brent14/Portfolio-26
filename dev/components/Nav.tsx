@@ -43,7 +43,7 @@ export default function Nav() {
       }`}
       style={
         !scrolled && isDark
-          ? { backgroundColor: 'var(--color-spot-1)' }
+          ? { backgroundColor: 'var(--color-bg-base)' }
           : undefined
       }
     >

@@ -1,12 +1,19 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useHoverBlend } from './HoverBlendProvider'
+
+const SPOT_VARS = ['--color-spot-1', '--color-spot-2', '--color-spot-3', '--color-spot-4', '--color-spot-5']
+
+function readSpotColors(): string[] {
+  if (typeof window === 'undefined') return []
+  const styles = getComputedStyle(document.documentElement)
+  return SPOT_VARS.map(v => styles.getPropertyValue(v).trim()).filter(Boolean)
+}
 
 export default function HoverBlend() {
   const { config } = useHoverBlend()
   const {
-    colors,
     blockSize,
     circleSize,
     detectionRadius,
@@ -19,10 +26,28 @@ export default function HoverBlend() {
   } = config
 
   const containerRef = useRef<HTMLDivElement>(null)
+  const [paletteKey, setPaletteKey] = useState(0)
+  const [isDark, setIsDark] = useState(false)
+
+  useEffect(() => {
+    const sync = () => setIsDark(document.documentElement.classList.contains('palette-dark'))
+    sync()
+    const observer = new MutationObserver(() => {
+      sync()
+      setPaletteKey(k => k + 1)
+    })
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+    return () => observer.disconnect()
+  }, [])
+
+  const effectiveBlendMode = isDark ? 'screen' : blendMode
 
   useEffect(() => {
     const container = containerRef.current
     if (!container) return
+
+    const colors = readSpotColors()
+    if (colors.length === 0) return
 
     // Bail on touch-only devices — effect is mouse-driven only
     if (!window.matchMedia('(pointer: fine)').matches) return
@@ -172,7 +197,7 @@ export default function HoverBlend() {
       document.removeEventListener('mousemove', onMouseMove)
       cancelAnimationFrame(rafId)
     }
-  }, [colors, blockSize, circleSize, detectionRadius, clusterSize, blockLifetime, emptyRatio, scaleRadius, minScale])
+  }, [paletteKey, blockSize, circleSize, detectionRadius, clusterSize, blockLifetime, emptyRatio, scaleRadius, minScale])
 
   return (
     <div
@@ -186,7 +211,7 @@ export default function HoverBlend() {
         height: '100vh',
         pointerEvents: 'none',
         zIndex: 0,
-        mixBlendMode: blendMode,
+        mixBlendMode: effectiveBlendMode,
         overflow: 'hidden',
       }}
     />
